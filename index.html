@@ -49,9 +49,26 @@
 <body class="home2-page">
     
 
-    <video class="body-overlay" muted="" autoplay="" loop="">
-        <source src="media/video2.mp4" type="video/mp4">
-    </video>
+    <video class="body-overlay" muted autoplay loop playsinline>
+    <source src="media/video2.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+</video>
+<script>
+    const video = document.querySelector('.body-overlay');
+    
+    // Ensure the video restarts if it stops
+    video.addEventListener('ended', () => {
+        video.play();
+    });
+
+    // Handle playback errors
+    video.addEventListener('error', () => {
+        console.error("Video playback error occurred.");
+        video.load(); // Reload the video
+        video.play();
+    });
+</script>
+
 
     <div class="page-loader">
         <div class="bounceball"></div>
