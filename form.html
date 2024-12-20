@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link rel="stylesheet" href="./fontawesome-5.5/css/all.min.css">
+</head>
+<body>
+    <div class="form">
+        <form action="#" method="post">
+        <input type="text" id="text" required>
+        <i class="text">Username</i>
+        <input type="password" id="pass" placeholder="Password" required>
+        <i class="pass">Password</i>
+        <input type="submit" id="sub" value="sign-up">
+
+        <div class="icon" id="icon"></div>
+        <div class="icon1" ></div>
+        <i class="fas fa-less-than"  id="icon"></i>
+        
+
+        <i class="fas fa-greater-than"  id="icon1"></i>
+        
+            
+        </form>
+    </div>
+
+    <style>
+        body{
+            display: flex;
+            box-sizing: border-box;
+            position: relative;
+            justify-content: center;
+            align-items: center;
+            min-height: 700px;
+            gap: 20px;
+            background: linear-gradient(to right, yellow,brown);
+            
+
+        }
+        .form{
+                display: inline-flex;
+                flex-shrink: 12px;
+                flex-direction: column;
+                width: 400px;
+                height: 100px;
+                border-radius: 30px;
+                box-shadow: 3px 4px 5px black;
+        }
+
+        #pass , .pass{
+            display: none ;
+        }
+        #text{
+            width: 60px;
+            height: 50px;
+            border-radius: 12px;
+            position: relative;
+            top:30px;
+            left: 20px;
+            outline: none;
+            border: none;
+            transition-duration: 0.8s;
+            background-color: rgb(228, 226, 213);
+            padding-right: 20px;
+
+        }
+        #text:focus, #text:active{
+            width: 300px;
+
+        }
+        .text{
+            position: relative;
+            z-index: 2;
+            top:30px;
+            left: -45px;
+            font-size: 14px;
+            font-style: normal;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            transition-duration: 0.8s;
+        }
+
+       .icon{
+            height: 40px;;
+            width: 40px;;
+            border-radius: 30px;
+            display: block ;
+            border-color: aliceblue;
+            border-width: 2px;
+            background-color: yellow;
+            opacity: 0.6;
+            position: absolute;
+            transition-duration: 0.7s;
+       }         
+       input:focus ~ .icon{
+            transform: rotateX(360deg) translateX(120px) ;
+       }
+
+
+/*icon 2  */
+
+
+       .icon1{
+            height: 40px;;
+            width: 40px;;
+            border-radius: 30px;
+            display: block ;
+            border-color: aliceblue;
+            border-width: 2px;
+            background-color: orange;
+            opacity: 0;
+            position: absolute;
+            transition-duration: 0.7s;
+            margin-top: -40px;
+            margin-left: 320px;;
+            
+       }         
+       input:focus ~ .icon1{
+            transform: rotate3d(40,34,11, 360deg) perspective(200px);
+            opacity: 0.6;
+
+       }
+       .text{
+        position: absolute;
+        z-index: 1111;
+        top:349px;
+       left:600px; 
+       }
+       #text:focus ~ .text{
+       color:orange;  
+       position: absolute;
+       z-index: 1111;
+       top:320px;
+       border-radius: 20px;
+       background: white;
+       padding: 3px;
+       box-sizing: content-box;
+       box-shadow: 1px 1px 2px black;
+       left:660px;
+
+       }
+       input[type="submit"]{
+        display:none; 
+       }
+
+       .fa-less-than{
+        display:none; 
+       }
+       .fa-greater-than{
+            position: absolute;
+            color: white;
+            margin-top:50px;
+            margin-left:40px;
+            transition-duration: 0.8s;
+            
+       }
+       .fa-greater-than:hover{
+        transform: scale(1.3);
+        position: absolute;
+        z-index: 1112;
+        
+       }
+       .fa-greater-than::after{
+        content: "";
+        width: 30px;
+        background: transparent;
+        height: 30px;
+        border-radius: 20px;
+        position: absolute;
+        margin-left: -25px;
+        border-color: orange;
+        box-shadow: 1px 1px 3px black;
+        border-style:inset ;
+        margin-top:-10px;
+        z-index: 111;
+        transition-duration: 0.8s;
+        
+       }
+       input:focus ~ .fa-greater-than::after{
+        transform: rotate3d(121,312,190, 360deg);
+        position: absolute;
+        z-index: 1212;
+       }
+       
+    </style>
+
+    <script>
+        document.getElementById("icon1").onclick = function(){
+          var icon =  document.getElementById("icon");
+          var icon1 =  document.getElementById("icon1");
+        }
+    </script>
+</body>
+</html>

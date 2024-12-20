@@ -1,0 +1,86 @@
+:root{
+    --font-color: #28E98C;
+}
+.slip{
+    animation-name: slip;
+    animation-iteration-count: 2;
+    animation-duration: 1.8s;
+    animation-timing-function:ease-in-out;
+    animation-fill-mode: both;
+    position: relative;
+    z-index: 1111;
+
+}
+@keyframes slip{
+    from{
+        transform:  translateX(-401px);
+    }
+    to{
+        transform: translateX(0px)
+    }
+}
+#stroke{
+    animation-name: stroke;
+    animation-iteration-count: 1;
+    animation-duration: 0.8s;
+    animation-timing-function:ease-in-out;
+    animation-fill-mode: both;
+    animation-delay:2.8s ;
+
+}
+@keyframes stroke {
+    100%{
+        color:transparent;
+        -webkit-text-stroke: var(--font-color) 2px;        
+        font-family: cursive;
+    }
+    0%{
+    }
+}
+.show{
+    animation-name: blur;
+    animation-iteration-count: 1;
+    animation-duration: 0.8s;
+    animation-timing-function:ease-in-out;
+    animation-fill-mode: forwards;
+    animation-delay:2.8s ;
+    filter: blur(2.8px);
+
+}
+@keyframes blur {
+    100%{
+        filter: blur(0px);
+    }
+    0%{
+        filter: blur(2.8px);
+    }
+}
+.show::before{
+    content: "";
+    /* width: 200px; */
+    height: 100px;
+    animation-name: range;
+    animation-duration: 0.8s;
+    position: absolute;
+    z-index: 11111;
+    background-color:rgb(5, 185, 80);
+    animation-iteration-count: 1;
+    animation-timing-function:ease-in-out;
+    animation-fill-mode: forwards;
+    animation-delay:2s ;
+}
+@keyframes range{
+    100%{
+        width: 0px;
+        border-radius: 10px;
+
+    }
+    
+    0%{
+        width: 400px;
+        border-radius: 80px;
+        
+    }
+}
+
+
