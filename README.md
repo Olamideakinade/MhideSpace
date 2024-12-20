@@ -1,0 +1,1 @@
+Welcome to my portfolio! This website is a showcase of my journey as a web developer, featuring projects that highlight my skills in HTML, CSS, JavaScript, and PHP. Here, you'll find a collection of my best work, ranging from visually stunning designs to functional web applications.
